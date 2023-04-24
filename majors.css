@@ -1,0 +1,265 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.clear {
+    clear: both;
+}
+
+a {
+    text-decoration: none;
+}
+
+.clearfix:after {
+    content: "";
+    display: block;
+    height: 0;
+    visibility: hidden;
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* body {
+    background: url(https://www.dmoe.cc/random.php) no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+} */
+
+#header {
+    height: 50px;
+    margin-top: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+#nav {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    background-color: rgba (0, 0, 0, 0.7);
+}
+
+#nav li {
+    
+}
+
+#nav li .subnav {
+    padding: 6px 0;
+    font-size: 130%;
+    line-height: 50px;
+    z-index: 0;
+    position: relative;
+    cursor: pointer;
+    color: red;
+    text-transform: uppercase;
+    font-family: fantasy;
+    font-weight: 550;
+}
+
+.subnav::before {
+    z-index: -1;
+    position: absolute;
+    transform: scaleX(0);
+    transform-origin: right;
+    background: linear-gradient(90deg, #007A9C, #223178) ;
+    content:"";
+    transition: transform .5s ease-in-out;
+    inset: 0;
+}
+
+.subnav:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.majors {
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+    font-weight: 700;
+    font-size: 24px;
+    border: 2px solid #000;
+    width: 250px;
+    text-align: center;
+    padding: 8px;
+    border-radius: 8px;
+    margin-left: 645px;
+    background-color: rgb(255 0 0 / 70%);
+}
+
+#content {
+    margin-top: 46px;
+    
+}
+
+#content .text-content {
+    background-color: rgba(0, 0, 0, 0.7);
+    margin-left: 36px;
+}
+
+#content .text-heading {
+    color: red;
+    font-size: 240%;
+    text-decoration: underline;
+    position: absolute;
+    margin-left: 115px;
+    font-weight: 550;
+}
+
+#content .text-dcr {
+    position: absolute;
+    color: #000;
+    width: 500px;
+    margin-top: 56px;
+    font-size: 150%;
+    margin-left: 136px;
+    font-weight: 600;
+}
+
+#content .majors-img {
+    margin-right: 126px;
+    float: right;
+    width: 85%;
+    height: 500px;
+    border-radius: 15px;
+}
+
+#slider {
+    margin-top: 86px;
+}
+
+#slider .text-slider {
+    
+}
+
+#slider .text-heading-slider {
+    color: red;
+    font-size: 240%;
+    text-decoration: underline;
+    margin-left: 50px;
+    font-weight: 550;
+}
+
+#slider .slider-img {
+    margin-right: 50px;
+}
+
+#slider .text-dcr-slider {
+    color: #fff;
+    list-style: none;
+    margin-left: 12px;
+    margin-top: 36px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#slider .text-dcr-slider li {
+    width: 300px;
+    margin-top: 36px;
+    border: 2px solid;
+    background-color: rgb(255 0 177 / 70%);
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+#slider .text-dcr1-slider {
+    list-style: none;
+}
+
+#slider .text-dcr1-slider li {
+    color: #fff;
+    width: 300px;
+    border: 2px solid;
+    background-color: rgb(255 0 177 / 70%);
+    padding: 12px;
+    border-radius: 22px;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+#slider .content1 {
+    margin-top: 10px;
+    margin-left: 50px;
+    border-radius: 22px;
+}
+
+#slider .content2 {
+    margin-top: -250px;
+    margin-left: 420px;
+    border-radius: 22px;
+}
+
+#slider .content3 {
+    margin-top: -250px;
+    margin-left: 785px;
+    border-radius: 22px;
+}
+
+#slider .content4 {
+    margin-top: -270px;
+    margin-left: 1150px;
+    border-radius: 22px;
+}
+
+#article {
+    margin-top: 156px;
+}
+
+#article .text-article {
+
+}
+
+#article .text-article-heading {
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+    font-weight: 700;
+    font-size: 24px;
+    border: 2px solid #000;
+    width: 250px;
+    text-align: center;
+    padding: 8px;
+    border-radius: 8px;
+    margin-left: 645px;
+    background-color: rgb(255 0 0 / 70%);
+}
+
+#article .drc-article {
+    list-style: none;
+    margin-top: 66px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#footer {
+    
+}
+
+.leave {
+    margin-top: -66px;
+    color: red;
+    font-size: 240%;
+    position: absolute;
+    margin-left: 115px;
+    font-weight: 550;
+    text-decoration: underline;
+}
+
+.drc {
+    color: #fff;
+    margin: 156px 36px 80px 106px;
+
+}
+
+#footer .drc li {
+    margin-top: 26px;
+    font-size: 20px;
+    text-align: justify;
+}

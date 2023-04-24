@@ -1,0 +1,232 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.clearfix:after {
+    content: "";
+    display: block;
+    height: 0;
+    visibility: hidden;
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* body {
+    background: url(https://www.dmoe.cc/random.php) no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+} */
+
+#header {
+    height: 50px;
+    margin-top: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+#nav {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    background-color: rgba (0, 0, 0, 0.7);
+}
+
+#nav li {
+    
+}
+
+#nav li .subnav {
+    padding: 6px 0;
+    font-size: 130%;
+    line-height: 50px;
+    z-index: 0;
+    position: relative;
+    cursor: pointer;
+    color: red;
+    text-transform: uppercase;
+    font-family: fantasy;
+    font-weight: 550;
+}
+
+.subnav::before {
+    z-index: -1;
+    position: absolute;
+    transform: scaleX(0);
+    transform-origin: right;
+    background: linear-gradient(90deg, #007A9C, #223178) ;
+    content:"";
+    transition: transform .5s ease-in-out;
+    inset: 0;
+}
+
+.subnav:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.text {
+    transition: all 1.0s;
+    animation: hover1 8s linear infinite;
+}
+
+
+.content {
+    width: 900px;
+    height: 590px;
+    margin: 50px auto 0 auto;
+    border-radius: 10px;
+    background-color: rgb(0 0 0 / 59%);
+    transition: all 1.0s;
+    animation: intro 1.5s ease-in-out;
+}
+
+.content img {
+    float: left;
+    width: 285px;
+    height: 285px;
+    margin: 150px 0 0 40px;
+    border-radius: 50%;
+    transition: all 0.8s ease-in-out;
+    cursor: pointer;
+}
+
+.content img:hover {
+    height: 360px;
+    border-radius: 6px;
+    transition: all 0.9s ease-in-out;
+    box-shadow: 0px 0px 20px rgb(255 39 39);
+}
+
+.content:hover {
+    box-shadow: 0px 0px 20px rgb(0, 162, 255);
+}
+
+.content_r {
+    float: right;
+    width: 500px;
+    margin: 80px 60px 0 0;
+}
+
+.content_l {
+    float: left;
+    width: 100%;
+    text-align: center;
+}
+
+.content_l h5 {
+
+    font-size: 17px;
+}
+
+.bio {
+    margin-top: 10px;
+    color: #1F2023;
+    font-size: 18px;
+}
+
+.color_1 {
+    color: #4855EC;
+    font-size: 18px;
+    font-weight: 540;
+    font-family: cursive;
+}
+
+.deeppink {
+    color: deeppink;
+    font-size: 120%;
+    font-weight: 550;
+    font-style: italic;
+}
+
+.link {
+    margin-top: 30px;
+}
+
+.link a {
+    display: block;
+    float: left;
+    width: 120px;
+    height: 45px;
+    margin: 5px 5px 0 0;
+    color: #fff;
+    line-height: 45px;
+    transition: all 0.8s;
+    border-radius: 30px;
+}
+
+.link a:hover {
+    background-color: rgba(0, 0, 0, 0.35);
+    box-shadow: 0px 0px 20px rgb(61, 196, 230);
+}
+
+.black {
+    background-color: rgb(36, 35, 35);
+}
+
+.dodgerblue {
+    background-color: dodgerblue;
+}
+
+.green {
+    background-color: rgb(0, 211, 248);
+}
+
+.red {
+    background-color: rgb(216, 25, 25);
+}
+
+@keyframes intro {
+    from {
+        opacity: 0;
+        transform: translateY(-180px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(-0px);
+    }
+}
+
+@keyframes intros {
+    from {
+        opacity: 0;
+        transform: translateX(-220px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes hide {
+    from {
+        opacity: 0;
+        transform: translateX(320px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes hover1 {
+    10%{color: rebeccapurple;}
+    20%{color: red;}
+    30%{color: yellow;}
+    40%{color: green;}
+    50%{color: tomato;}
+    60%{color: blue;}
+    70%{color: gray;}
+    80%{color: indigo;}
+    90%{color: aqua;}
+    100%{color: pink;}
+}

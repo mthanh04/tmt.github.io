@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hiệu ứng Hạt hữu cơ – Vegasaur chạy trong toàn bộ trang web</title>
+	<style type="text/css">
+		/* Định dạng background */
+		body {
+			background: #000;
+		}
+
+		/* Định dạng hiệu ứng */
+		#particles {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: -1;
+		}
+
+		/* Định dạng hạt */
+		.particle {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 2px;
+			height: 2px;
+			border-radius: 50%;
+			background: rgba(255,255,255,0.8);
+			-webkit-animation: particle 4s ease-in-out infinite;
+			animation: particle 4s ease-in-out infinite;
+		}
+        
+
+		/* Khai báo keyframes cho animation */
+		@-webkit-keyframes particle {
+			0% {
+				-webkit-transform: translate(0, 0);
+				transform: translate(0, 0);
+				opacity: 1;
+			}
+			100% {
+				-webkit-transform: translate(100vw, 100vh);
+				transform: translate(100vw, 100vh);
+				opacity: 0;
+			}
+		}
+
+		@keyframes particle {
+			0% {
+				-webkit-transform: translate(0, 0);
+				transform: translate(0, 0);
+				opacity: 1;
+			}
+			100% {
+				-webkit-transform: translate(100vw, 100vh);
+				transform: translate(100vw, 100vh);
+				opacity: 0;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div id="particles"></div>
+	<!-- Nội dung trang web của bạn ở đây -->
+
+	<script type="text/javascript">
+		// Tạo các hạt ngẫu nhiên
+		function createParticle() {
+			var particle = document.createElement('div');
+			particle.classList.add('particle');
+			particle.style.top = Math.random() * window.innerHeight + 'px';
+			particle.style.left = Math.random() * window.innerWidth + 'px';
+			document.getElementById('particles').appendChild(particle);
+			setTimeout(function() {
+				particle.remove();
+			}, 4000);
+		}
+
+		// Tạo hạt mới sau mỗi 0.1ms
+		setInterval(createParticle, 0.1);
+        
+/* Hàm tạo màu sắc ngẫu nhiên */
+function randomColor() {
+    var colors = ['#FF6138', '#FFFF9D', '#BEEB9F', '#79BD8F', '#00A388']
+    return colors[Math.floor(Math.random() * colors.length)];
+}
+
+/* Tạo các hạt ngẫu nhiên */
+function createParticle() {
+    var particle = document.createElement('div');
+    particle.classList.add('particle');
+    particle.style.top = Math.random() * window.innerHeight + 'px';
+    particle.style.left = Math.random() * window.innerWidth + 'px';
+    particle.style.background = randomColor();
+    document.getElementById('particles').appendChild(particle);
+    setTimeout(function() {
+        particle.remove();
+    }, 4000);
+}
+	</script>
+    
+</body>
+</html>
